@@ -64,17 +64,66 @@ function addColorPickerDemo() {
     const colorDemos = document.querySelectorAll('.color-demo');
 
     colorDemos.forEach(demo => {
-        demo.addEventListener('click', function() {
-            // Cycle through different background colors
-            const colors = ['red', '#3498db', 'orange', 'green', 'purple', 'pink'];
-            const currentColor = this.style.backgroundColor;
-            const currentIndex = colors.indexOf(currentColor) || 0;
-            const nextIndex = (currentIndex + 1) % colors.length;
+        // Store click count per demo element
+        demo.dataset.clickCount = 0;
 
-            this.style.backgroundColor = colors[nextIndex];
-            this.textContent = `Color: ${colors[nextIndex]}`;
+        // Set initial text to show the named color
+        const bgColor = demo.style.backgroundColor;
+        demo.textContent = getColorName(bgColor);
+
+        demo.addEventListener('click', function() {
+            const currentBg = this.style.backgroundColor;
+            let clickCount = parseInt(this.dataset.clickCount) || 0;
+
+            // Define color representations for each demo box
+            const colorRepresentations = {
+                'red': ['red', '#ff0000', 'rgb(255, 0, 0)', 'hsl(0, 100%, 50%)'],
+                'rgb(52, 152, 219)': ['#3498db', 'rgb(52, 152, 219)', 'hsl(204, 70%, 53%)', '#3498db'],
+                'orange': ['orange', '#ffa500', 'rgb(255, 165, 0)', 'hsl(39, 100%, 50%)'],
+                'rgb(39, 174, 96)': ['#27ae60', 'rgb(39, 174, 96)', 'hsl(145, 63%, 42%)', '#27ae60'],
+                'purple': ['purple', '#800080', 'rgb(128, 0, 128)', 'hsl(300, 100%, 25%)'],
+                'pink': ['pink', '#ffc0cb', 'rgb(255, 192, 203)', 'hsl(350, 100%, 88%)']
+            };
+
+            const representations = colorRepresentations[currentBg] || colorRepresentations['red'];
+
+            clickCount = (clickCount + 1) % representations.length;
+            this.dataset.clickCount = clickCount;
+
+            const currentRepresentation = representations[clickCount];
+            this.textContent = currentRepresentation;
+            this.style.color = getContrastColor(currentBg);
         });
     });
+}
+
+// Helper function to get color name from background color
+function getColorName(bgColor) {
+    const colorNames = {
+        'red': 'red',
+        'rgb(52, 152, 219)': '#3498db',
+        'orange': 'orange',
+        'rgb(39, 174, 96)': '#27ae60',
+        'purple': 'purple',
+        'pink': 'pink'
+    };
+
+    return colorNames[bgColor] || 'color';
+}
+
+// Helper function to get contrasting text color
+function getContrastColor(bgColor) {
+    // Simple contrast detection - return white for darker colors, black for lighter
+    const colorMap = {
+        'red': 'white',
+        'rgb(52, 152, 219)': 'white',
+        'orange': 'black',
+        'rgb(39, 174, 96)': 'white',
+        'purple': 'white',
+        'pink': 'black'
+    };
+
+    return colorMap[bgColor] || 'black';
 }
 
 // Add CSS for interactive demos

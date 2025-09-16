@@ -4,7 +4,7 @@ A progressive web development course organized by weeks, teaching HTML, CSS, and
 
 ## 🚀 Live Demo
 
-[View the live course on GitHub Pages](https://yourusername.github.io/html-learning-journey/)
+[View the live course on GitHub Pages](https://adabwana.github.io/html/)
 
 ## 📁 Project Structure
 
