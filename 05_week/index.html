@@ -28,101 +28,151 @@
             <p>Variables are containers for storing data values. JavaScript has three ways to declare variables.</p>
 
             <article>
-                <h3>Basic Selectors</h3>
-                <div class="demo-section">
-                    <p class="element-selector">Element selector (p)</p>
-                    <p id="id-selector">ID selector (#id-selector)</p>
-                    <p class="class-selector">Class selector (.class-selector)</p>
-                </div>
+                <h3>Variable Declaration</h3>
 
                 <div class="code-example">
-                    <pre><code>p { color: blue; }           /* Element */
-#unique { font-size: 20px; }   /* ID */
-.highlight { background: yellow; } /* Class */</code></pre>
+                    <pre><code>// var (older way, avoid using)
+var name = "John";
+
+// let (modern way, can be reassigned)
+let age = 25;
+age = 26; // This is allowed
+
+// const (cannot be reassigned)
+const PI = 3.14159;
+// PI = 3.14; // This would cause an error</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="variable-demo">
+                        <button onclick="demonstrateVariables()">Try Variables</button>
+                        <div id="variable-output">Click the button to see variables in action!</div>
+                    </div>
                 </div>
             </article>
 
             <article>
-                <h3>Advanced Selectors</h3>
-                <div class="demo-section">
-                    <div class="parent">
-                        <p>Parent element</p>
-                        <p class="child">Child element (descendant)</p>
-                        <p class="adjacent">Adjacent sibling</p>
-                    </div>
-                    <p class="sibling">General sibling</p>
-                </div>
+                <h3>Data Types</h3>
 
                 <div class="code-example">
-                    <pre><code>.parent .child { color: red; }    /* Descendant */
-.parent > .child { font-weight: bold; } /* Direct child */
-.adjacent + .sibling { color: green; } /* Adjacent sibling */
-.adjacent ~ .sibling { color: blue; }  /* General sibling */</code></pre>
+                    <pre><code>// Primitive data types
+let string = "Hello World";    // String
+let number = 42;               // Number
+let boolean = true;            // Boolean
+let nothing = null;            // Null
+let undefined;                 // Undefined
+
+// Complex data types
+let array = [1, 2, 3, 4, 5];   // Array
+let object = {name: "John", age: 25}; // Object</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="data-type-demo">
+                        <button onclick="demonstrateDataTypes()">Show Data Types</button>
+                        <div id="data-type-output"></div>
+                    </div>
                 </div>
             </article>
         </section>
 
-        <section id="box-model">
-            <h2>The Box Model</h2>
-            <p>Every HTML element is a rectangular box. Understanding the box model is crucial for layout.</p>
+        <section id="functions">
+            <h2>JavaScript Functions</h2>
+            <p>Functions are reusable blocks of code that perform specific tasks.</p>
 
             <article>
-                <h3>Box Model Components</h3>
-                <div class="box-model-demo">
-                    <div class="content">Content</div>
-                </div>
-
-                <div class="explanation">
-                    <ul>
-                        <li><strong>Content:</strong> The actual content (text, images, etc.)</li>
-                        <li><strong>Padding:</strong> Space between content and border</li>
-                        <li><strong>Border:</strong> Line around the padding</li>
-                        <li><strong>Margin:</strong> Space outside the border</li>
-                    </ul>
-                </div>
+                <h3>Function Declaration</h3>
 
                 <div class="code-example">
-                    <pre><code>.box {
-    width: 200px;      /* Content width */
-    padding: 20px;     /* Padding all sides */
-    border: 2px solid black;  /* Border */
-    margin: 10px;      /* Margin all sides */
-}</code></pre>
+                    <pre><code>// Function declaration
+function greetUser(name) {
+    return "Hello, " + name + "!";
+}
+
+// Function expression
+const addNumbers = function(a, b) {
+    return a + b;
+};
+
+// Arrow function (ES6+)
+const multiply = (a, b) => a * b;
+
+// Calling functions
+let greeting = greetUser("Alice");
+let sum = addNumbers(5, 3);
+let product = multiply(4, 7);</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="function-demo">
+                        <input type="text" id="user-name" placeholder="Enter your name">
+                        <button onclick="callFunctionDemo()">Call Function</button>
+                        <div id="function-output"></div>
+                    </div>
                 </div>
             </article>
 
             <article>
-                <h3>Colors and Backgrounds</h3>
-                <div class="demo-section">
-                    <div class="color-demo color1">Named color: red</div>
-                    <div class="color-demo color2">Hex: #3498db</div>
-                    <div class="color-demo color3">RGB: rgb(255, 165, 0)</div>
-                    <div class="color-demo color4">HSL: hsl(120, 100%, 50%)</div>
-                </div>
+                <h3>DOM Manipulation</h3>
 
                 <div class="code-example">
-                    <pre><code>color: red;                    /* Text color */
-background-color: #f0f0f0;    /* Background color */
-background-image: url('image.jpg'); /* Background image */
-opacity: 0.8;                   /* Transparency */</code></pre>
+                    <pre><code>// Selecting elements
+let element = document.getElementById('myId');
+let elements = document.querySelectorAll('.myClass');
+
+// Changing content
+element.textContent = "New text";
+element.innerHTML = "&lt;strong&gt;Bold text&lt;/strong&gt;";
+
+// Changing styles
+element.style.color = "red";
+element.style.fontSize = "20px";
+
+// Adding event listeners
+element.addEventListener('click', function() {
+    alert('Element clicked!');
+});</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="dom-demo">
+                        <div id="dom-element" class="dom-box">Click me to change!</div>
+                        <button onclick="changeDOM()">Change Element</button>
+                        <button onclick="resetDOM()">Reset</button>
+                    </div>
                 </div>
             </article>
 
             <article>
-                <h3>Typography</h3>
-                <div class="demo-section">
-                    <p class="font-demo font1">Font family: Arial, sans-serif</p>
-                    <p class="font-demo font2">Font size: 1.5rem</p>
-                    <p class="font-demo font3">Font weight: bold</p>
-                    <p class="font-demo font4">Line height: 2</p>
-                </div>
+                <h3>Event Handling</h3>
 
                 <div class="code-example">
-                    <pre><code>font-family: 'Arial', sans-serif;
-font-size: 16px;
-font-weight: bold;
-line-height: 1.6;
-text-align: center;</code></pre>
+                    <pre><code>// Click event
+button.addEventListener('click', function() {
+    console.log('Button was clicked!');
+});
+
+// Mouse events
+element.addEventListener('mouseenter', function() {
+    this.style.backgroundColor = 'lightblue';
+});
+
+element.addEventListener('mouseleave', function() {
+    this.style.backgroundColor = '';
+});
+
+// Keyboard events
+input.addEventListener('keydown', function(event) {
+    console.log('Key pressed:', event.key);
+});</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="event-demo">
+                        <button id="event-button">Click me!</button>
+                        <input type="text" id="event-input" placeholder="Type something...">
+                        <div id="event-output">Event information will appear here</div>
+                    </div>
                 </div>
             </article>
         </section>
@@ -131,35 +181,57 @@ text-align: center;</code></pre>
             <h2>Practice Exercises</h2>
 
             <div class="exercise">
-                <h3>Exercise 1: Style Your Week 1 Page</h3>
-                <p>Go back to your Week 1 HTML and add CSS to:</p>
+                <h3>Exercise 1: Variable Practice</h3>
+                <p>Create variables and perform operations:</p>
                 <ul>
-                    <li>Style the header with a background color</li>
-                    <li>Change font colors and sizes</li>
-                    <li>Add padding and margins to elements</li>
-                    <li>Style the navigation menu</li>
+                    <li>Declare variables using let, const, and var</li>
+                    <li>Perform mathematical operations</li>
+                    <li>Concatenate strings</li>
+                    <li>Use console.log() to debug your code</li>
                 </ul>
             </div>
 
             <div class="exercise">
-                <h3>Exercise 2: Create a Color Scheme</h3>
-                <p>Design a consistent color scheme and apply it to:</p>
+                <h3>Exercise 2: Function Creation</h3>
+                <p>Write and call functions:</p>
                 <ul>
-                    <li>Background colors</li>
-                    <li>Text colors</li>
-                    <li>Border colors</li>
-                    <li>Link hover states</li>
+                    <li>Create a function that calculates area of a rectangle</li>
+                    <li>Write a function that converts Celsius to Fahrenheit</li>
+                    <li>Create a function that checks if a number is even or odd</li>
+                    <li>Use different function declaration styles</li>
                 </ul>
             </div>
 
             <div class="exercise">
-                <h3>Exercise 3: Box Model Practice</h3>
-                <p>Create several div elements and experiment with:</p>
+                <h3>Exercise 3: DOM Manipulation</h3>
+                <p>Practice changing webpage content dynamically:</p>
                 <ul>
-                    <li>Different padding values</li>
-                    <li>Various border styles</li>
-                    <li>Margin spacing</li>
-                    <li>Width and height properties</li>
+                    <li>Select elements using different methods (getElementById, querySelector)</li>
+                    <li>Change text content and HTML content</li>
+                    <li>Modify CSS styles using JavaScript</li>
+                    <li>Create new elements and add them to the page</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 4: Event Handling</h3>
+                <p>Add interactivity to your pages:</p>
+                <ul>
+                    <li>Add click event listeners to buttons</li>
+                    <li>Create form validation</li>
+                    <li>Handle keyboard input events</li>
+                    <li>Implement mouse hover effects</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 5: Build a Simple Calculator</h3>
+                <p>Create a fully functional calculator:</p>
+                <ul>
+                    <li>Create HTML structure with number buttons and operators</li>
+                    <li>Write JavaScript functions for each operation</li>
+                    <li>Handle user input and display results</li>
+                    <li>Add error handling for invalid operations</li>
                 </ul>
             </div>
         </section>
