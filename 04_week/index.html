@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 03: CSS Fundamentals - HTML Learning Journey</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Week 3: Transform plain HTML into beautiful, styled web pages with CSS fundamentals">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">← Back to Home</a></li>
+                <li><a href="#selectors">Selectors</a></li>
+                <li><a href="#box-model">Box Model</a></li>
+                <li><a href="#practice">Practice</a></li>
+            </ul>
+        </nav>
+    <h1>📱 Week 04: Responsive Design</h1>
+    <p>Mobile-First • Media Queries • Flexible Layouts</p>
+    </header>
+
+    <main>
+        <section id="selectors">
+            <h2>CSS Selectors</h2>
+            <p>CSS selectors target HTML elements to apply styles. Understanding selectors is key to effective styling.</p>
+
+            <article>
+                <h3>Basic Selectors</h3>
+                <div class="demo-section">
+                    <p class="element-selector">Element selector (p)</p>
+                    <p id="id-selector">ID selector (#id-selector)</p>
+                    <p class="class-selector">Class selector (.class-selector)</p>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>p { color: blue; }           /* Element */
+#unique { font-size: 20px; }   /* ID */
+.highlight { background: yellow; } /* Class */</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Advanced Selectors</h3>
+                <div class="demo-section">
+                    <div class="parent">
+                        <p>Parent element</p>
+                        <p class="child">Child element (descendant)</p>
+                        <p class="adjacent">Adjacent sibling</p>
+                    </div>
+                    <p class="sibling">General sibling</p>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>.parent .child { color: red; }    /* Descendant */
+.parent > .child { font-weight: bold; } /* Direct child */
+.adjacent + .sibling { color: green; } /* Adjacent sibling */
+.adjacent ~ .sibling { color: blue; }  /* General sibling */</code></pre>
+                </div>
+            </article>
+        </section>
+
+        <section id="box-model">
+            <h2>The Box Model</h2>
+            <p>Every HTML element is a rectangular box. Understanding the box model is crucial for layout.</p>
+
+            <article>
+                <h3>Box Model Components</h3>
+                <div class="box-model-demo">
+                    <div class="content">Content</div>
+                </div>
+
+                <div class="explanation">
+                    <ul>
+                        <li><strong>Content:</strong> The actual content (text, images, etc.)</li>
+                        <li><strong>Padding:</strong> Space between content and border</li>
+                        <li><strong>Border:</strong> Line around the padding</li>
+                        <li><strong>Margin:</strong> Space outside the border</li>
+                    </ul>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>.box {
+    width: 200px;      /* Content width */
+    padding: 20px;     /* Padding all sides */
+    border: 2px solid black;  /* Border */
+    margin: 10px;      /* Margin all sides */
+}</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Colors and Backgrounds</h3>
+                <div class="demo-section">
+                    <div class="color-demo color1">Named color: red</div>
+                    <div class="color-demo color2">Hex: #3498db</div>
+                    <div class="color-demo color3">RGB: rgb(255, 165, 0)</div>
+                    <div class="color-demo color4">HSL: hsl(120, 100%, 50%)</div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>color: red;                    /* Text color */
+background-color: #f0f0f0;    /* Background color */
+background-image: url('image.jpg'); /* Background image */
+opacity: 0.8;                   /* Transparency */</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Typography</h3>
+                <div class="demo-section">
+                    <p class="font-demo font1">Font family: Arial, sans-serif</p>
+                    <p class="font-demo font2">Font size: 1.5rem</p>
+                    <p class="font-demo font3">Font weight: bold</p>
+                    <p class="font-demo font4">Line height: 2</p>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>font-family: 'Arial', sans-serif;
+font-size: 16px;
+font-weight: bold;
+line-height: 1.6;
+text-align: center;</code></pre>
+                </div>
+            </article>
+        </section>
+
+        <section id="practice">
+            <h2>Practice Exercises</h2>
+
+            <div class="exercise">
+                <h3>Exercise 1: Style Your Week 1 Page</h3>
+                <p>Go back to your Week 1 HTML and add CSS to:</p>
+                <ul>
+                    <li>Style the header with a background color</li>
+                    <li>Change font colors and sizes</li>
+                    <li>Add padding and margins to elements</li>
+                    <li>Style the navigation menu</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 2: Create a Color Scheme</h3>
+                <p>Design a consistent color scheme and apply it to:</p>
+                <ul>
+                    <li>Background colors</li>
+                    <li>Text colors</li>
+                    <li>Border colors</li>
+                    <li>Link hover states</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 3: Box Model Practice</h3>
+                <p>Create several div elements and experiment with:</p>
+                <ul>
+                    <li>Different padding values</li>
+                    <li>Various border styles</li>
+                    <li>Margin spacing</li>
+                    <li>Width and height properties</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="navigation">
+            <h2>Continue Your Learning Journey</h2>
+            <div class="nav-buttons">
+                <a href="../02_week/" class="prev-week">← Previous: Week 02</a>
+                <a href="../04_week/" class="next-week">Next: Week 04 →</a>
+                <a href="../index.html" class="back-home">← Back to Course Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML Learning Journey • Week 03: CSS Fundamentals</p>
+        <p>Built for progressive web development learning</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

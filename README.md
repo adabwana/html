@@ -1,64 +1,68 @@
-# HTML Learning Template
+# HTML Learning Journey
 
-A comprehensive HTML template designed for teaching HTML, CSS, and JavaScript fundamentals. This template includes examples of common HTML elements, responsive CSS styling, and basic JavaScript interactivity.
+A progressive web development course organized by weeks, teaching HTML, CSS, and JavaScript fundamentals through hands-on examples and interactive exercises.
 
 ## 🚀 Live Demo
 
-[View the live demo on GitHub Pages](https://yourusername.github.io/html-learning-template/)
+[View the live course on GitHub Pages](https://yourusername.github.io/html-learning-journey/)
 
 ## 📁 Project Structure
 
 ```
-html-learning-template/
-├── index.html          # Main HTML file with all examples
-├── css/
-│   └── styles.css      # CSS styles with responsive design
-├── js/
-│   └── script.js       # JavaScript for interactivity
-├── img/                # Image assets
-│   ├── favicon.ico     # Browser tab icon
-│   └── html-logo.png   # Sample image
-├── assets/             # Additional media files
-│   ├── sample-audio.mp3
-│   └── sample-video.mp4
-├── .nojekyll          # GitHub Pages configuration
-└── README.md          # This file
+html-learning-journey/
+├── index.html                 # Landing page with course navigation
+├── .github/
+│   └── workflows/
+│       └── deploy.yml         # GitHub Actions for auto-deployment
+├── 01_week/                   # HTML Basics
+│   ├── index.html
+│   ├── css/
+│   └── js/
+├── 02_week/                   # HTML Forms & Tables
+│   ├── index.html
+│   ├── css/
+│   └── js/
+├── 03_week/                   # CSS Fundamentals
+│   ├── index.html
+│   ├── css/
+│   └── js/
+├── 04_week/                   # Responsive Design
+│   ├── index.html
+│   ├── css/
+│   └── js/
+├── 05_week/                   # JavaScript Basics
+│   ├── index.html
+│   ├── css/
+│   └── js/
+├── img/                       # Shared image assets
+├── assets/                    # Shared media files
+├── .nojekyll                 # GitHub Pages configuration
+├── .gitignore
+└── README.md
 ```
 
-## 🎯 Features
+## 🎯 Course Features
 
-### HTML Elements Covered
-- Document structure (`DOCTYPE`, `html`, `head`, `body`)
-- Headings (`h1`-`h6`)
-- Text formatting (`strong`, `em`, `mark`, `del`, `code`, `pre`)
-- Lists (ordered and unordered)
-- Links and navigation
-- Images and figures
-- Tables
-- Forms and input elements
-- Semantic HTML (`header`, `nav`, `main`, `section`, `article`, `footer`)
-- Multimedia (`audio`, `video`)
+### Progressive Learning Structure
+- **Week 01**: HTML Basics - Document structure, elements, and semantic markup
+- **Week 02**: HTML Forms & Tables - User input and data presentation
+- **Week 03**: CSS Fundamentals - Selectors, box model, and styling
+- **Week 04**: Responsive Design - Mobile-first approach and media queries
+- **Week 05**: JavaScript Basics - Interactivity, DOM manipulation, and events
 
-### CSS Features
-- CSS reset and base styles
-- Responsive design with media queries
-- Typography styling
-- Form styling
-- Table styling
-- Navigation styling
-- Utility classes
-- Print styles
-- CSS animations and transitions
+### Weekly Content Includes
+- **HTML Elements**: Complete coverage from basic structure to advanced forms
+- **CSS Techniques**: From basic styling to responsive design patterns
+- **JavaScript Concepts**: DOM manipulation, event handling, and dynamic content
+- **Interactive Examples**: Hands-on code that students can modify and experiment with
+- **Practice Exercises**: Real-world assignments to reinforce learning
 
-### JavaScript Features
-- DOM manipulation
-- Event handling
-- Form validation
-- Smooth scrolling navigation
-- Dynamic content creation
-- Intersection Observer for animations
-- Interactive counter example
-- Console utilities for learning
+### Technical Features
+- **GitHub Actions**: Automatic deployment to GitHub Pages on every push
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile
+- **Interactive Demos**: JavaScript-powered examples and exercises
+- **Clean Code**: Well-organized, commented, and educational code structure
+- **Cross-browser Compatible**: Tested and working across modern browsers
 
 ## 🛠️ Getting Started
 
@@ -137,48 +141,70 @@ git push -u origin main
 1. Go to your repository on GitHub
 2. Click on the "Settings" tab
 3. Scroll down to "Pages" section
-4. Under "Source", select "Deploy from a branch"
-5. Under "Branch", select "main" and "/ (root)"
-6. Click "Save"
+4. Under "Source", select "GitHub Actions"
+5. The workflow file we created will automatically deploy your site
 
 ### Step 4: Access Your Site
 
-Wait a few minutes, then visit: `https://yourusername.github.io/html-learning-template/`
+Wait a few minutes for the GitHub Actions workflow to complete, then visit: `https://yourusername.github.io/html-learning-journey/`
+
+**Note**: With GitHub Actions, your site will automatically redeploy every time you push changes to the main branch!
 
 ## 📚 Learning Guide
 
-### HTML Basics
-1. Open `index.html` and examine the document structure
-2. Look at different HTML elements and their purposes
-3. Try modifying text content and see the changes
-4. Experiment with adding new elements
+### Course Progression
+1. **Start Here**: Visit the main landing page (`index.html`) to see the course overview
+2. **Week by Week**: Follow the curriculum in order, each week builds on the previous
+3. **Hands-On Learning**: Each week includes interactive examples and practice exercises
+4. **Experiment**: Modify the code, break it, and learn from your mistakes
 
-### CSS Styling
-1. Open `css/styles.css` to see the styling rules
-2. Try changing colors, fonts, and spacing
-3. Test the responsive design by resizing your browser
-4. Add your own CSS classes and styles
+### Weekly Breakdown
 
-### JavaScript Interactivity
-1. Open `js/script.js` to understand the code
-2. Open browser developer tools (F12) and check the console
-3. Try the interactive counter and form validation
-4. Use the console utilities: `logAllHeadings()` and `getElementInfo()`
+#### Week 01: HTML Basics
+- Learn basic HTML document structure
+- Master common HTML elements (headings, paragraphs, lists, links)
+- Understand semantic HTML and accessibility
+- Practice: Create your first complete HTML page
+
+#### Week 02: HTML Forms & Tables
+- Master form elements and input types
+- Learn table structure and data presentation
+- Understand form validation and submission
+- Practice: Build contact forms and data tables
+
+#### Week 03: CSS Fundamentals
+- Understand CSS selectors and specificity
+- Master the box model (padding, border, margin)
+- Learn colors, typography, and basic layout
+- Practice: Style existing HTML with custom CSS
+
+#### Week 04: Responsive Design
+- Learn mobile-first responsive design
+- Master media queries and breakpoints
+- Understand flexible layouts (Flexbox, Grid)
+- Practice: Make websites work on all screen sizes
+
+#### Week 05: JavaScript Basics
+- Learn JavaScript syntax and data types
+- Master DOM manipulation and event handling
+- Understand basic programming concepts
+- Practice: Add interactivity to static web pages
 
 ## 🔧 Customization Ideas
 
 ### For Students
-- Add your own content and images
-- Change the color scheme
-- Modify the navigation menu
-- Add more interactive elements
-- Create additional pages
+- Complete the weekly exercises and assignments
+- Add your own projects to each week's folder
+- Customize the styling and layout
+- Extend the JavaScript functionality
+- Create additional weeks for advanced topics
 
 ### For Teachers
-- Use this as a starting point for assignments
-- Add comments explaining complex concepts
-- Include additional examples for advanced topics
-- Create variations for different skill levels
+- Add new weekly folders for additional content
+- Include assessment questions and answers
+- Add more advanced examples and exercises
+- Customize the curriculum for your specific class
+- Use the GitHub repository for collaborative learning
 
 ## 🌟 Best Practices Demonstrated
 

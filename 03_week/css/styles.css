@@ -1,0 +1,300 @@
+/* Week 03: CSS Fundamentals */
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+h2 {
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    color: #27ae60;
+    margin-top: 1.5rem;
+}
+
+/* Navigation */
+nav {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #27ae60;
+}
+
+/* Header */
+header {
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Demo Sections */
+.demo-section {
+    background-color: #f8fff8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border: 2px solid #d4edda;
+}
+
+/* Box Model Demo */
+.box-model-demo {
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border: 5px solid #2c3e50;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+}
+
+.box-model-demo::before {
+    content: "Padding: 20px";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e74c3c;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.box-model-demo::after {
+    content: "Border: 5px solid";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2c3e50;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Color Demos */
+.color-demo {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+.color1 { background-color: red; }
+.color2 { background-color: #3498db; }
+.color3 { background-color: rgb(255, 165, 0); }
+.color4 { background-color: hsl(120, 100%, 50%); }
+
+/* Font Demos */
+.font-demo {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.font1 { font-family: Arial, sans-serif; }
+.font2 { font-size: 1.5rem; }
+.font3 { font-weight: bold; }
+.font4 { line-height: 2; }
+
+/* Code Examples */
+.code-example {
+    background-color: #f8f9fa;
+    border-left: 4px solid #27ae60;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+pre {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+code {
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #27ae60;
+}
+
+pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+/* Exercises */
+.exercise {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.exercise h3 {
+    color: #856404;
+}
+
+/* Navigation Section */
+.navigation {
+    text-align: center;
+    background: linear-gradient(135deg, #27ae60 0%, #219a52 100%);
+    color: white;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-buttons a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.next-week {
+    background: #f39c12 !important;
+}
+
+.next-week:hover {
+    background: #e67e22 !important;
+}
+
+.prev-week {
+    background: #3498db !important;
+}
+
+.prev-week:hover {
+    background: #2980b9 !important;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+    }
+}

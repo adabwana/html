@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 02: HTML Forms & Tables - HTML Learning Journey</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Week 2: Master user input forms and data presentation with tables">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">← Back to Home</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#practice">Practice</a></li>
+            </ul>
+        </nav>
+        <h1>📝 Week 02: HTML Forms & Tables</h1>
+        <p>Interaction • Data Collection • Information Display</p>
+    </header>
+
+    <main>
+        <section id="forms">
+            <h2>HTML Forms</h2>
+            <p>Forms allow users to input data and interact with your website. They're essential for user interaction.</p>
+
+            <article>
+                <h3>Form Structure</h3>
+                <p>Every form needs opening and closing <code>&lt;form&gt;</code> tags with attributes:</p>
+
+                <div class="code-example">
+                    <pre><code>&lt;form action="submit.php" method="post"&gt;
+    &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+
+                <div class="explanation">
+                    <ul>
+                        <li><code>action</code> - Where to send form data</li>
+                        <li><code>method</code> - How to send data (GET or POST)</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Input Types</h3>
+
+                <h4>Text Input</h4>
+                <div class="demo-section">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+
+                <h4>Email Input</h4>
+                <div class="demo-section">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com">
+                </div>
+
+                <h4>Password Input</h4>
+                <div class="demo-section">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+
+                <h4>Number Input</h4>
+                <div class="demo-section">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="1" max="120">
+                </div>
+
+                <h4>Date Input</h4>
+                <div class="demo-section">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday">
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;input type="text" name="username" placeholder="Username"&gt;
+&lt;input type="email" name="email" required&gt;
+&lt;input type="password" name="password"&gt;
+&lt;input type="number" name="age" min="0" max="120"&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Selection Inputs</h3>
+
+                <h4>Checkboxes</h4>
+                <div class="demo-section">
+                    <p>What programming languages do you know?</p>
+                    <label><input type="checkbox" name="languages" value="html"> HTML</label><br>
+                    <label><input type="checkbox" name="languages" value="css"> CSS</label><br>
+                    <label><input type="checkbox" name="languages" value="javascript"> JavaScript</label>
+                </div>
+
+                <h4>Radio Buttons</h4>
+                <div class="demo-section">
+                    <p>What's your experience level?</p>
+                    <label><input type="radio" name="experience" value="beginner"> Beginner</label><br>
+                    <label><input type="radio" name="experience" value="intermediate"> Intermediate</label><br>
+                    <label><input type="radio" name="experience" value="advanced"> Advanced</label>
+                </div>
+
+                <h4>Select Dropdown</h4>
+                <div class="demo-section">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="">Select a country</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                        <option value="au">Australia</option>
+                    </select>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;input type="checkbox" name="agree" value="yes"&gt; I agree
+
+&lt;input type="radio" name="gender" value="male"&gt; Male
+&lt;input type="radio" name="gender" value="female"&gt; Female
+
+&lt;select name="country"&gt;
+    &lt;option value="us"&gt;United States&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Textarea and Buttons</h3>
+
+                <h4>Textarea</h4>
+                <div class="demo-section">
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea>
+                </div>
+
+                <h4>Buttons</h4>
+                <div class="demo-section">
+                    <button type="button" onclick="alert('Hello!')">Click me!</button>
+                    <input type="submit" value="Submit Form">
+                    <input type="reset" value="Reset Form">
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;textarea name="comments" rows="4" cols="50"&gt;&lt;/textarea&gt;
+
+&lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;input type="reset" value="Clear Form"&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Complete Form Example</h3>
+                <div class="demo-section">
+                    <form id="demo-form">
+                        <h4>Contact Information</h4>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name:</label>
+                                <input type="text" id="first-name" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" id="last-name" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email:</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message:</label>
+                            <textarea id="contact-message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label><input type="checkbox" name="newsletter" value="yes"> Subscribe to newsletter</label>
+                        </div>
+
+                        <button type="submit">Send Message</button>
+                        <button type="reset">Reset Form</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <section id="tables">
+            <h2>HTML Tables</h2>
+            <p>Tables organize data in rows and columns, perfect for displaying structured information.</p>
+
+            <article>
+                <h3>Basic Table Structure</h3>
+
+                <div class="demo-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>25</td>
+                                <td>New York</td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>30</td>
+                                <td>London</td>
+                            </tr>
+                            <tr>
+                                <td>Bob Johnson</td>
+                                <td>35</td>
+                                <td>Paris</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Table Elements</h3>
+                <div class="explanation">
+                    <ul>
+                        <li><code>&lt;table&gt;</code> - Container for the table</li>
+                        <li><code>&lt;thead&gt;</code> - Header section</li>
+                        <li><code>&lt;tbody&gt;</code> - Body section (main data)</li>
+                        <li><code>&lt;tfoot&gt;</code> - Footer section (optional)</li>
+                        <li><code>&lt;tr&gt;</code> - Table row</li>
+                        <li><code>&lt;th&gt;</code> - Header cell (bold, centered)</li>
+                        <li><code>&lt;td&gt;</code> - Data cell</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Advanced Table Features</h3>
+
+                <h4>Spanning Cells</h4>
+                <div class="demo-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th colspan="3">Grades</th>
+                                <th>Average</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>Math</th>
+                                <th>Science</th>
+                                <th>English</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alice</td>
+                                <td>95</td>
+                                <td>87</td>
+                                <td>92</td>
+                                <td>91.3</td>
+                            </tr>
+                            <tr>
+                                <td>Bob</td>
+                                <td>88</td>
+                                <td>94</td>
+                                <td>85</td>
+                                <td>89.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;th colspan="3"&gt;Grades&lt;/th&gt;  &lt;!-- Spans 3 columns --&gt;
+&lt;td rowspan="2"&gt;Data&lt;/td&gt;    &lt;!-- Spans 2 rows --&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Table with Footer</h3>
+                <div class="demo-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Widget A</td>
+                                <td>2</td>
+                                <td>$10.00</td>
+                                <td>$20.00</td>
+                            </tr>
+                            <tr>
+                                <td>Widget B</td>
+                                <td>1</td>
+                                <td>$15.00</td>
+                                <td>$15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Widget C</td>
+                                <td>3</td>
+                                <td>$8.00</td>
+                                <td>$24.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"><strong>Grand Total</strong></td>
+                                <td><strong>$59.00</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <section id="practice">
+            <h2>Practice Exercises</h2>
+
+            <div class="exercise">
+                <h3>Exercise 1: Create a Contact Form</h3>
+                <p>Build a contact form with the following fields:</p>
+                <ul>
+                    <li>Name (required text input)</li>
+                    <li>Email (required email input)</li>
+                    <li>Phone (optional tel input)</li>
+                    <li>Subject (select dropdown)</li>
+                    <li>Message (textarea)</li>
+                    <li>Newsletter checkbox</li>
+                    <li>Submit and Reset buttons</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 2: Student Grade Table</h3>
+                <p>Create a table showing student grades with:</p>
+                <ul>
+                    <li>Header row with student names and assignment columns</li>
+                    <li>Multiple student rows with scores</li>
+                    <li>A footer row showing averages</li>
+                    <li>Use colspan for assignment categories</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 3: Survey Form</h3>
+                <p>Create a survey form that includes:</p>
+                <ul>
+                    <li>Radio buttons for single-choice questions</li>
+                    <li>Checkboxes for multiple-choice questions</li>
+                    <li>Rating scale using number inputs</li>
+                    <li>Open-ended questions with textareas</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="navigation">
+            <h2>Continue Your Learning Journey</h2>
+            <div class="nav-buttons">
+                <a href="../01_week/" class="prev-week">← Previous: Week 01</a>
+                <a href="../03_week/" class="next-week">Next: Week 03 →</a>
+                <a href="../index.html" class="back-home">← Back to Course Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML Learning Journey • Week 02: HTML Forms & Tables</p>
+        <p>Built for progressive web development learning</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
