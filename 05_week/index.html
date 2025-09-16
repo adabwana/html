@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 03: CSS Fundamentals - HTML Learning Journey</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Week 3: Transform plain HTML into beautiful, styled web pages with CSS fundamentals">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">← Back to Home</a></li>
+                <li><a href="#variables">JavaScript Variables</a></li>
+                <li><a href="#functions">JavaScript Functions</a></li>
+                <li><a href="#practice">Practice</a></li>
+            </ul>
+        </nav>
+    <h1>⚡ Week 05: JavaScript Basics</h1>
+    <p>Interactivity • DOM • Events</p>
+    </header>
+
+    <main>
+        <section id="variables">
+            <h2>JavaScript Variables</h2>
+            <p>Variables are containers for storing data values. JavaScript has three ways to declare variables.</p>
+
+            <article>
+                <h3>Variable Declaration</h3>
+
+                <div class="code-example">
+                    <pre><code>// var (older way, avoid using)
+var name = "John";
+
+// let (modern way, can be reassigned)
+let age = 25;
+age = 26; // This is allowed
+
+// const (cannot be reassigned)
+const PI = 3.14159;
+// PI = 3.14; // This would cause an error</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="variable-demo">
+                        <button onclick="demonstrateVariables()">Try Variables</button>
+                        <div id="variable-output">Click the button to see variables in action!</div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Data Types</h3>
+
+                <div class="code-example">
+                    <pre><code>// Primitive data types
+let string = "Hello World";    // String
+let number = 42;               // Number
+let boolean = true;            // Boolean
+let nothing = null;            // Null
+let undefined;                 // Undefined
+
+// Complex data types
+let array = [1, 2, 3, 4, 5];   // Array
+let object = {name: "John", age: 25}; // Object</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="data-type-demo">
+                        <button onclick="demonstrateDataTypes()">Show Data Types</button>
+                        <div id="data-type-output"></div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="functions">
+            <h2>JavaScript Functions</h2>
+            <p>Functions are reusable blocks of code that perform specific tasks.</p>
+
+            <article>
+                <h3>Function Declaration</h3>
+
+                <div class="code-example">
+                    <pre><code>// Function declaration
+function greetUser(name) {
+    return "Hello, " + name + "!";
+}
+
+// Function expression
+const addNumbers = function(a, b) {
+    return a + b;
+};
+
+// Arrow function (ES6+)
+const multiply = (a, b) => a * b;
+
+// Calling functions
+let greeting = greetUser("Alice");
+let sum = addNumbers(5, 3);
+let product = multiply(4, 7);</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="function-demo">
+                        <input type="text" id="user-name" placeholder="Enter your name">
+                        <button onclick="callFunctionDemo()">Call Function</button>
+                        <div id="function-output"></div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>DOM Manipulation</h3>
+
+                <div class="code-example">
+                    <pre><code>// Selecting elements
+let element = document.getElementById('myId');
+let elements = document.querySelectorAll('.myClass');
+
+// Changing content
+element.textContent = "New text";
+element.innerHTML = "&lt;strong&gt;Bold text&lt;/strong&gt;";
+
+// Changing styles
+element.style.color = "red";
+element.style.fontSize = "20px";
+
+// Adding event listeners
+element.addEventListener('click', function() {
+    alert('Element clicked!');
+});</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="dom-demo">
+                        <div id="dom-element" class="dom-box">Click me to change!</div>
+                        <button onclick="changeDOM()">Change Element</button>
+                        <button onclick="resetDOM()">Reset</button>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Event Handling</h3>
+
+                <div class="code-example">
+                    <pre><code>// Click event
+button.addEventListener('click', function() {
+    console.log('Button was clicked!');
+});
+
+// Mouse events
+element.addEventListener('mouseenter', function() {
+    this.style.backgroundColor = 'lightblue';
+});
+
+element.addEventListener('mouseleave', function() {
+    this.style.backgroundColor = '';
+});
+
+// Keyboard events
+input.addEventListener('keydown', function(event) {
+    console.log('Key pressed:', event.key);
+});</code></pre>
+                </div>
+
+                <div class="demo-section">
+                    <div class="event-demo">
+                        <button id="event-button">Click me!</button>
+                        <input type="text" id="event-input" placeholder="Type something...">
+                        <div id="event-output">Event information will appear here</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="practice">
+            <h2>Practice Exercises</h2>
+
+            <div class="exercise">
+                <h3>Exercise 1: Variable Practice</h3>
+                <p>Create variables and perform operations:</p>
+                <ul>
+                    <li>Declare variables using let, const, and var</li>
+                    <li>Perform mathematical operations</li>
+                    <li>Concatenate strings</li>
+                    <li>Use console.log() to debug your code</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 2: Function Creation</h3>
+                <p>Write and call functions:</p>
+                <ul>
+                    <li>Create a function that calculates area of a rectangle</li>
+                    <li>Write a function that converts Celsius to Fahrenheit</li>
+                    <li>Create a function that checks if a number is even or odd</li>
+                    <li>Use different function declaration styles</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 3: DOM Manipulation</h3>
+                <p>Practice changing webpage content dynamically:</p>
+                <ul>
+                    <li>Select elements using different methods (getElementById, querySelector)</li>
+                    <li>Change text content and HTML content</li>
+                    <li>Modify CSS styles using JavaScript</li>
+                    <li>Create new elements and add them to the page</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 4: Event Handling</h3>
+                <p>Add interactivity to your pages:</p>
+                <ul>
+                    <li>Add click event listeners to buttons</li>
+                    <li>Create form validation</li>
+                    <li>Handle keyboard input events</li>
+                    <li>Implement mouse hover effects</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 5: Build a Simple Calculator</h3>
+                <p>Create a fully functional calculator:</p>
+                <ul>
+                    <li>Create HTML structure with number buttons and operators</li>
+                    <li>Write JavaScript functions for each operation</li>
+                    <li>Handle user input and display results</li>
+                    <li>Add error handling for invalid operations</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="navigation">
+            <h2>Continue Your Learning Journey</h2>
+            <div class="nav-buttons">
+                <a href="../04_week/" class="prev-week">← Previous: Week 04</a>
+                <!-- <a href="../04_week/" class="next-week">Next: Week 04 →</a> -->
+                <a href="../index.html" class="back-home">← Back to Course Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML Learning Journey • Week 03: CSS Fundamentals</p>
+        <p>Built for progressive web development learning</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

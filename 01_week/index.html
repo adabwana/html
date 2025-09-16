@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 01: HTML Basics - HTML Learning Journey</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Week 1: Learn the fundamental structure of HTML pages, basic elements, and semantic markup">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">← Back to Home</a></li>
+                <li><a href="#structure">Structure</a></li>
+                <li><a href="#elements">Elements</a></li>
+                <li><a href="#practice">Practice</a></li>
+            </ul>
+        </nav>
+        <h1>📄 Week 01: HTML Basics</h1>
+        <p>Foundation • Document Structure • Basic Elements</p>
+    </header>
+
+    <main>
+        <section id="structure">
+            <h2>HTML Document Structure</h2>
+            <p>Every HTML page starts with a basic structure. Here's what you need to know:</p>
+
+            <div class="code-example">
+                <h3>The Basic HTML Template</h3>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <div class="explanation">
+                <h3>Key Components:</h3>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html&gt;</code> - Tells the browser this is an HTML5 document</li>
+                    <li><code>&lt;html&gt;</code> - The root element of the page</li>
+                    <li><code>&lt;head&gt;</code> - Contains metadata about the page</li>
+                    <li><code>&lt;body&gt;</code> - Contains the visible content</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="elements">
+            <h2>Basic HTML Elements</h2>
+
+            <article>
+                <h3>Headings</h3>
+                <p>Headings create a hierarchy for your content. There are 6 levels:</p>
+
+                <div class="demo-section">
+                    <h1>This is Heading 1 (h1)</h1>
+                    <h2>This is Heading 2 (h2)</h2>
+                    <h3>This is Heading 3 (h3)</h3>
+                    <h4>This is Heading 4 (h4)</h4>
+                    <h5>This is Heading 5 (h5)</h5>
+                    <h6>This is Heading 6 (h6)</h6>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Paragraphs and Text</h3>
+                <p>The paragraph tag creates blocks of text. You can format text within paragraphs:</p>
+
+                <div class="demo-section">
+                    <p>This is a regular paragraph with <strong>bold text</strong> and <em>italic text</em>.</p>
+                    <p>You can create <mark>highlighted text</mark> and show <del>deleted text</del>.</p>
+                    <p>For code snippets, use <code>&lt;code&gt;</code> tags.</p>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;p&gt;This is a &lt;strong&gt;bold&lt;/strong&gt; word.&lt;/p&gt;
+&lt;p&gt;This is &lt;em&gt;italic&lt;/em&gt; text.&lt;/p&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Lists</h3>
+
+                <h4>Unordered Lists (Bullet Points)</h4>
+                <div class="demo-section">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </div>
+
+                <h4>Ordered Lists (Numbered)</h4>
+                <div class="demo-section">
+                    <ol>
+                        <li>Learn HTML basics</li>
+                        <li>Practice with examples</li>
+                        <li>Build your first webpage</li>
+                    </ol>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;ol&gt;
+    &lt;li&gt;First step&lt;/li&gt;
+    &lt;li&gt;Second step&lt;/li&gt;
+    &lt;li&gt;Third step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Links and Images</h3>
+
+                <h4>Links</h4>
+                <div class="demo-section">
+                    <p>Here's a link to <a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a>.</p>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Link Text&lt;/a&gt;</code></pre>
+                </div>
+
+                <h4>Images</h4>
+                <div class="demo-section">
+                    <figure>
+                        <img src="../img/html-logo.png" alt="HTML Logo" width="200">
+                        <figcaption>The official HTML logo</figcaption>
+                    </figure>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>&lt;img src="image.jpg" alt="Description" width="300"&gt;</code></pre>
+                </div>
+            </article>
+        </section>
+
+        <section id="practice">
+            <h2>Practice Exercises</h2>
+
+            <div class="exercise">
+                <h3>Exercise 1: Create Your First HTML Page</h3>
+                <p>Create a new HTML file with the following content:</p>
+                <ul>
+                    <li>A main heading with your name</li>
+                    <li>A paragraph introducing yourself</li>
+                    <li>An unordered list of your favorite hobbies</li>
+                    <li>A link to your favorite website</li>
+                </ul>
+
+                <div class="code-example">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Your Name&lt;/h1&gt;
+    &lt;p&gt;Hello! I'm learning HTML.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Reading&lt;/li&gt;
+        &lt;li&gt;Coding&lt;/li&gt;
+        &lt;li&gt;Gaming&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="https://example.com"&gt;My Favorite Site&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 2: HTML Structure</h3>
+                <p>Identify the purpose of each HTML element:</p>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html&gt;</code> - ?</li>
+                    <li><code>&lt;html&gt;</code> - ?</li>
+                    <li><code>&lt;head&gt;</code> - ?</li>
+                    <li><code>&lt;body&gt;</code> - ?</li>
+                    <li><code>&lt;h1&gt;</code> - ?</li>
+                    <li><code>&lt;p&gt;</code> - ?</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 3: Text Formatting</h3>
+                <p>Create a paragraph that demonstrates all the text formatting elements you've learned:</p>
+                <ul>
+                    <li>Bold text</li>
+                    <li>Italic text</li>
+                    <li>Highlighted text</li>
+                    <li>Code snippets</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="navigation">
+            <h2>Continue Your Learning Journey</h2>
+            <div class="nav-buttons">
+                <a href="../02_week/" class="next-week">Next: Week 02 →</a>
+                <a href="../index.html" class="back-home">← Back to Course Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML Learning Journey • Week 01: HTML Basics</p>
+        <p>Built for progressive web development learning</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

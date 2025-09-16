@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 04: Responsive Design - HTML Learning Journey</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Week 4: Learn mobile-first responsive design and media queries">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">← Back to Home</a></li>
+                <li><a href="#media-queries">Media Queries</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+                <li><a href="#practice">Practice</a></li>
+            </ul>
+        </nav>
+        <h1>📱 Week 04: Responsive Design</h1>
+        <p>Mobile-First • Media Queries • Flexible Layouts</p>
+    </header>
+
+    <main>
+        <section id="media-queries">
+            <h2>Media Queries</h2>
+            <p>Media queries allow you to apply different styles based on device characteristics like screen size, resolution, and orientation.</p>
+
+            <article>
+                <h3>Basic Media Query Syntax</h3>
+
+                <div class="code-example">
+                    <pre><code>/* Mobile first - default styles for small screens */
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        padding: 20px;
+    }
+}
+
+/* Desktop and up */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+        padding: 30px;
+    }
+}</code></pre>
+                </div>
+
+                <div class="explanation">
+                    <h4>Common Breakpoints:</h4>
+                    <ul>
+                        <li><strong>Mobile:</strong> 320px - 767px</li>
+                        <li><strong>Tablet:</strong> 768px - 991px</li>
+                        <li><strong>Desktop:</strong> 992px - 1199px</li>
+                        <li><strong>Large Desktop:</strong> 1200px+</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <h3>Media Query Features</h3>
+
+                <h4>Screen Size</h4>
+                <div class="code-example">
+                    <pre><code>/* Minimum width */
+@media (min-width: 768px) { ... }
+
+/* Maximum width */
+@media (max-width: 767px) { ... }
+
+/* Between two widths */
+@media (min-width: 768px) and (max-width: 991px) { ... }</code></pre>
+                </div>
+
+                <h4>Device Orientation</h4>
+                <div class="code-example">
+                    <pre><code>/* Portrait orientation */
+@media (orientation: portrait) { ... }
+
+/* Landscape orientation */
+@media (orientation: landscape) { ... }</code></pre>
+                </div>
+
+                <h4>Device Type</h4>
+                <div class="code-example">
+                    <pre><code>/* Print styles */
+@media print { ... }
+
+/* High resolution screens */
+@media (-webkit-min-device-pixel-ratio: 2) { ... }</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Interactive Demo</h3>
+                <p>Resize your browser window to see how this layout adapts:</p>
+
+                <div class="responsive-demo">
+                    <div class="demo-header">Header</div>
+                    <div class="demo-sidebar">Sidebar</div>
+                    <div class="demo-main">Main Content</div>
+                    <div class="demo-footer">Footer</div>
+                </div>
+
+                <div class="screen-size-display">
+                    <p>Current screen width: <span id="screen-width">0</span>px</p>
+                    <p>Current breakpoint: <span id="current-breakpoint">Unknown</span></p>
+                </div>
+            </article>
+        </section>
+
+        <section id="flexbox">
+            <h2>Flexbox Layout</h2>
+            <p>Flexbox is a modern layout system that makes it easy to create flexible, responsive layouts.</p>
+
+            <article>
+                <h3>Flexbox Container Properties</h3>
+
+                <div class="flex-demo">
+                    <div class="flex-item">Item 1</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>.container {
+    display: flex;              /* Enable flexbox */
+    justify-content: center;    /* Horizontal alignment */
+    align-items: center;        /* Vertical alignment */
+    flex-direction: row;        /* Direction: row, column */
+    flex-wrap: wrap;           /* Wrap items to new line */
+}</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Flexbox Item Properties</h3>
+
+                <div class="flex-demo-2">
+                    <div class="flex-item small">Small</div>
+                    <div class="flex-item medium">Medium</div>
+                    <div class="flex-item large">Large</div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>.item {
+    flex-grow: 1;      /* How much item can grow */
+    flex-shrink: 1;    /* How much item can shrink */
+    flex-basis: auto;  /* Initial size */
+    /* Shorthand: flex: 1 1 auto; */
+}</code></pre>
+                </div>
+            </article>
+
+            <article>
+                <h3>Common Flexbox Patterns</h3>
+
+                <h4>Navigation Bar</h4>
+                <div class="nav-demo">
+                    <div class="nav-item">Home</div>
+                    <div class="nav-item">About</div>
+                    <div class="nav-item">Services</div>
+                    <div class="nav-item">Contact</div>
+                </div>
+
+                <h4>Card Layout</h4>
+                <div class="cards-demo">
+                    <div class="card">
+                        <h4>Card 1</h4>
+                        <p>Content for card 1</p>
+                    </div>
+                    <div class="card">
+                        <h4>Card 2</h4>
+                        <p>Content for card 2</p>
+                    </div>
+                    <div class="card">
+                        <h4>Card 3</h4>
+                        <p>Content for card 3</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="practice">
+            <h2>Practice Exercises</h2>
+
+            <div class="exercise">
+                <h3>Exercise 1: Mobile-First Navigation</h3>
+                <p>Create a navigation menu that:</p>
+                <ul>
+                    <li>Stacks vertically on mobile (320px and below)</li>
+                    <li>Displays horizontally on tablets (768px and up)</li>
+                    <li>Centers items on desktop (992px and up)</li>
+                    <li>Uses a hamburger menu on very small screens</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 2: Responsive Grid Layout</h3>
+                <p>Build a responsive grid that:</p>
+                <ul>
+                    <li>Shows 1 column on mobile</li>
+                    <li>Shows 2 columns on tablets</li>
+                    <li>Shows 3 columns on desktop</li>
+                    <li>Uses Flexbox or CSS Grid</li>
+                    <li>Has consistent spacing between items</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 3: Responsive Images</h3>
+                <p>Make images responsive by:</p>
+                <ul>
+                    <li>Setting max-width: 100% and height: auto</li>
+                    <li>Using different image sizes for different screen sizes</li>
+                    <li>Implementing art direction with <picture> element</li>
+                    <li>Testing on various device sizes</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 4: Print Styles</h3>
+                <p>Create print-friendly styles:</p>
+                <ul>
+                    <li>Hide navigation and footer for printing</li>
+                    <li>Use a serif font for better readability</li>
+                    <li>Remove background colors and images</li>
+                    <li>Ensure links show their URLs</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="navigation">
+            <h2>Continue Your Learning Journey</h2>
+            <div class="nav-buttons">
+                <a href="../03_week/" class="prev-week">← Previous: Week 03</a>
+                <a href="../05_week/" class="next-week">Next: Week 05 →</a>
+                <a href="../index.html" class="back-home">← Back to Course Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML Learning Journey • Week 04: Responsive Design</p>
+        <p>Built for progressive web development learning</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
