@@ -239,7 +239,7 @@ pre code {
 /* Navigation Section */
 .navigation {
     text-align: center;
-    background: linear-gradient(135deg, #27ae60 0%, #219a52 100%);
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
     color: white;
 }
 
@@ -267,20 +267,12 @@ pre code {
     transform: translateY(-2px);
 }
 
-.next-week {
+.prev-week {
     background: #f39c12 !important;
 }
 
-.next-week:hover {
-    background: #e67e22 !important;
-}
-
-.prev-week {
-    background: #3498db !important;
-}
-
 .prev-week:hover {
-    background: #2980b9 !important;
+    background: #e67e22 !important;
 }
 
 /* Footer */

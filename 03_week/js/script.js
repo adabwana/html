@@ -64,53 +64,64 @@ function addColorPickerDemo() {
     const colorDemos = document.querySelectorAll('.color-demo');
 
     colorDemos.forEach(demo => {
+        // Skip if already initialized
+        if (demo.dataset.initialized) return;
+
         // Store click count per demo element
         demo.dataset.clickCount = 0;
+        demo.dataset.initialized = 'true';
 
-        // Clear initial text and set to first representation
-        const colorClass = Array.from(demo.classList).find(cls => cls.startsWith('color'));
-        const representations = getColorRepresentations(colorClass);
-        demo.textContent = representations[0];
+        // Get the actual background color and set appropriate representations
+        const computedStyle = getComputedStyle(demo);
+        const bgColor = computedStyle.backgroundColor;
+        const representations = getColorRepresentationsByValue(bgColor);
+
+        // Set initial text if empty
+        if (!demo.textContent.trim()) {
+            demo.textContent = representations[0];
+            console.log(`Setting box with bg ${bgColor} to: ${representations[0]}`);
+        }
 
         demo.addEventListener('click', function() {
             let clickCount = parseInt(this.dataset.clickCount) || 0;
-
-            const colorClass = Array.from(this.classList).find(cls => cls.startsWith('color'));
-            const representations = getColorRepresentations(colorClass);
+            const computedStyle = getComputedStyle(this);
+            const bgColor = computedStyle.backgroundColor;
+            const representations = getColorRepresentationsByValue(bgColor);
 
             clickCount = (clickCount + 1) % representations.length;
             this.dataset.clickCount = clickCount;
 
             const currentRepresentation = representations[clickCount];
             this.textContent = currentRepresentation;
-            this.style.color = getContrastColor(colorClass);
+            this.style.color = getContrastColorByValue(bgColor);
+
+            console.log(`Box with bg ${bgColor} clicked: ${currentRepresentation}`);
         });
     });
 }
 
-// Helper function to get color representations based on class
-function getColorRepresentations(colorClass) {
+// Helper function to get color representations based on computed background color
+function getColorRepresentationsByValue(bgColor) {
     const representations = {
-        'color1': ['red', '#ff0000', 'rgb(255, 0, 0)', 'hsl(0, 100%, 50%)'],
-        'color2': ['#3498db', 'rgb(52, 152, 219)', 'hsl(204, 70%, 53%)', '#3498db'],
-        'color3': ['rgb(255, 165, 0)', 'orange', '#ffa500', 'hsl(39, 100%, 50%)'],
-        'color4': ['hsl(120, 100%, 50%)', '#00ff00', 'rgb(0, 255, 0)', 'green']
+        'rgb(255, 0, 0)': ['Red', 'Hex: #ff0000', 'RGB: rgb(255, 0, 0)', 'HSL: hsl(0, 100%, 50%)'], // red
+        'rgb(52, 152, 219)': ['Blue', 'Hex: #3498db', 'RGB: rgb(52, 152, 219)', 'HSL: hsl(204, 70%, 53%)'], // blue
+        'rgb(255, 165, 0)': ['Orange', 'Hex: #ffa500', 'RGB: rgb(255, 165, 0)', 'HSL: hsl(39, 100%, 50%)'], // orange
+        'rgb(0, 255, 0)': ['Green', 'Hex: #00ff00', 'RGB: rgb(0, 255, 0)', 'HSL: hsl(120, 100%, 50%)'] // green
     };
 
-    return representations[colorClass] || representations['color1'];
+    return representations[bgColor] || ['color', 'Hex: #000000', 'RGB: rgb(0, 0, 0)', 'HSL: hsl(0, 0%, 0%)'];
 }
 
-// Helper function to get contrasting text color
-function getContrastColor(colorClass) {
-    // Simple contrast detection - return white for darker colors, black for lighter
+// Helper function to get contrasting text color based on background color
+function getContrastColorByValue(bgColor) {
     const colorMap = {
-        'color1': 'white',  // red background
-        'color2': 'white',  // blue background
-        'color3': 'black',  // orange background
-        'color4': 'black'   // green background
+        'rgb(255, 0, 0)': 'white',    // red background
+        'rgb(52, 152, 219)': 'white', // blue background
+        'rgb(255, 165, 0)': 'black',  // orange background
+        'rgb(0, 255, 0)': 'black'     // green background
     };
 
-    return colorMap[colorClass] || 'black';
+    return colorMap[bgColor] || 'white';
 }
 
 // Add CSS for interactive demos

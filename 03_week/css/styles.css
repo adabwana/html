@@ -147,9 +147,22 @@ section {
 .color-demo {
     padding: 1rem;
     margin: 0.5rem 0;
-    border-radius: 4px;
+    border-radius: 8px;
     color: white;
     font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-demo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .color1 { background-color: red; }
@@ -255,11 +268,11 @@ pre code {
 }
 
 .prev-week {
-    background: #3498db !important;
+    background: #e74c3c !important;
 }
 
 .prev-week:hover {
-    background: #2980b9 !important;
+    background: #c0392b !important;
 }
 
 /* Footer */

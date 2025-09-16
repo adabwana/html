@@ -223,11 +223,11 @@ figcaption {
 }
 
 .next-week {
-    background: #27ae60 !important;
+    background: #e74c3c !important;
 }
 
 .next-week:hover {
-    background: #219a52 !important;
+    background: #c0392b !important;
 }
 
 /* Footer */
