@@ -58,7 +58,7 @@ html-learning-journey/
 - **Practice Exercises**: Real-world assignments to reinforce learning
 
 ### Technical Features
-- **GitHub Actions**: Automatic deployment to GitHub Pages on every push
+- **Simple Deployment**: Direct deployment from master branch to GitHub Pages
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile
 - **Interactive Demos**: JavaScript-powered examples and exercises
 - **Clean Code**: Well-organized, commented, and educational code structure
@@ -133,7 +133,7 @@ git commit -m "Initial commit: HTML learning template"
 git remote add origin https://github.com/yourusername/html-learning-template.git
 
 # Push to GitHub
-git push -u origin main
+git push -u origin master
 ```
 
 ### Step 3: Enable GitHub Pages
@@ -141,14 +141,15 @@ git push -u origin main
 1. Go to your repository on GitHub
 2. Click on the "Settings" tab
 3. Scroll down to "Pages" section
-4. Under "Source", select "GitHub Actions"
-5. The workflow file we created will automatically deploy your site
+4. Under "Source", select "Deploy from a branch"
+5. Under "Branch", select "master" and "/ (root)"
+6. Click "Save"
 
 ### Step 4: Access Your Site
 
-Wait a few minutes for the GitHub Actions workflow to complete, then visit: `https://yourusername.github.io/html-learning-journey/`
+Wait a few minutes, then visit: `https://yourusername.github.io/html-learning-journey/`
 
-**Note**: With GitHub Actions, your site will automatically redeploy every time you push changes to the main branch!
+**Note**: Your site will automatically update every time you push changes to the master branch!
 
 ## 📚 Learning Guide
 
