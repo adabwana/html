@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Template</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to HTML Learning!</h1>
+        <p>This template demonstrates basic HTML structure and common elements.</p>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Getting Started with HTML</h2>
+            <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using markup.</p>
+
+            <article>
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li>Basic HTML structure</li>
+                    <li>Text formatting</li>
+                    <li>Links and navigation</li>
+                    <li>Images and media</li>
+                    <li>Forms and user input</li>
+                    <li>Semantic HTML</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="about">
+            <h2>About HTML Elements</h2>
+
+            <h3>Text Formatting</h3>
+            <p>This is <strong>bold text</strong> and this is <em>italic text</em>.</p>
+            <p>You can create <mark>highlighted text</mark> and <del>strikethrough text</del>.</p>
+            <p>For code, use <code>&lt;code&gt;</code> tags and for longer code blocks:</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;/code&gt;</pre>
+
+            <h3>Lists</h3>
+            <h4>Unordered List</h4>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <h4>Ordered List</h4>
+            <ol>
+                <li>Learn HTML basics</li>
+                <li>Practice with examples</li>
+                <li>Build your first webpage</li>
+            </ol>
+
+            <h3>Links and Images</h3>
+            <p>Here's an example of an <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">external link</a> to learn more about HTML.</p>
+
+            <figure>
+                <img src="img/html-logo.png" alt="HTML Logo" width="200">
+                <figcaption>The official HTML logo</figcaption>
+            </figure>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Form</h2>
+            <p>Get in touch with us using the form below:</p>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="priority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </div>
+
+                <button type="submit">Send Message</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Tables</h2>
+            <p>Tables are useful for displaying tabular data:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;h1&gt;</td>
+                        <td>Main heading</td>
+                        <td><h1 style="margin: 0; font-size: 1rem;">Heading 1</h1></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;p&gt;</td>
+                        <td>Paragraph</td>
+                        <td><p style="margin: 0;">Paragraph text</p></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;a&gt;</td>
+                        <td>Link</td>
+                        <td><a href="#" style="color: blue;">Link</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Multimedia</h2>
+            <p>HTML supports various types of media:</p>
+
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="assets/sample-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Video</h3>
+            <video width="400" controls>
+                <source src="assets/sample-video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HTML Learning Template. Built for educational purposes.</p>
+        <p>Created with ❤️ for learning HTML</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
